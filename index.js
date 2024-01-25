@@ -1,9 +1,10 @@
-const getArgv = require('./helpers/argv')
+import getArgs from './helpers/argv.js'
+import {printError, printSuccess,printHelp} from './servise/log.servise.js'
 const startCli = () =>{
-    const arg = getArgv(process.argv)
-
+    const arg = getArgs(process.argv)
+console.log(arg);
     if(arg.h){
-        //help
+        printHelp()
     }
     if(arg.s){
         //save
